@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffd049;
+}
+
+header {
+    width: 85%;
+    border-radius: 5px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    background-image: url("img/fondo-header.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+header a {
+    padding: 5px;
+}
+
+h1 {
+    color: #fff;
+    margin-left: 10px;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+main {
+    width: 85%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Boton */
+
+.buttonCerveza {
+    border: none;
+    background-color: #01325f;
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    margin: auto;
+}
+
+.buttonCerveza:hover {
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(1, 50, 95, 0.7);
+    transition: all 0.2s ease;
+}
+
+
+/* Tarjeta */
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    width: 50%;
+    height: 350px;
+    content: hidden;
+    margin: 0 auto 20px auto;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.front {
+    display: flex;
+    background-color: #fffee1;
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.front img {
+    margin: auto;
+}
+
+.front h3 {
+    top: 3px;
+    position: absolute;
+    width: 100%;
+    line-height: 45px;
+    color: #000;
+    text-align: center;
+}
+
+.back {
+    position: relative;
+    background-color: #fffee1;
+    transform: perspective(600px) rotateY(180deg);
+    padding: 15px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#cervezaNombreBack {
+    width: 95%;
+    position: absolute;
+    text-align: center;
+}
+
+.descBack {
+    width: 100%;
+    margin: 50px auto 0 auto;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.grados {
+    border: 3px solid #01325f;
+    border-radius: 50px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: hsla(45, 100%, 73%, 0.906);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    right: 0;
+    margin: 60px 180px 0 0;
+}
+
+.grados p {
+    text-align: center;
+}
+
+#slogan {
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    bottom: 0;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 1350px) {
+    .card {
+        width: 75%;
+    }
+    .grados {
+        margin: 60px 120px 0 0;
+    }
+}
+
+@media (max-width: 1025px) {
+    .card {
+        width: 85%;
+        margin: 0 auto 5px auto;
+    }
+    .grados {
+        margin: 60px 110px 0 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .card {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 670px) {
+    h1 {
+        font-size: 32px;
+        margin-left: 5px;
+    }
+    header a img {
+        width: 50px;
+    }
+    .card {
+        width: 90%;
+    }
+}
+
+
+/*Moviles iPhone SE, iPhone XR*/
+
+@media (max-width: 500px) {
+    .card {
+        width: 100%;
+        height: 450px;
+        margin: 0 auto 10px auto;
+    }
+    .grados {
+        margin: 60px 50px 0 0;
+    }
+}

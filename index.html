@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervezas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/cerveza-icono.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="img/logo.png" alt="logo de cerveceame" width="100px"></a>
+        <h1>CERVEZAS</h1>
+    </header>
+    <main>
+        <div class="card" id="cardMain" style="display:none;">
+            <div class="face front">
+                <h3 id="cervezaNombre"></h3>
+                <img id="imagenCerveza" src="" width="60px">
+                <div class="grados">
+                    <p id="gradosCerveza"></p>
+                </div>
+                <p id="slogan"></p>
+            </div>
+            <div class="face back">
+                <h4 id="cervezaNombreBack"></h4>
+                <div class="descBack">
+                    <p id="cervezaDescripcion"></p>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="mostrarCervezaAleatoria()" class="buttonCerveza">
+           ¡Cerveza!🍺
+        </button>
+    </main>
+
+    <script type="text/javascript" src="js/functions.js" defer></script>
+</body>
+
+</html>
